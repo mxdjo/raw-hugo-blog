@@ -1,0 +1,80 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hello-friend-ng"
+relativeURLs = true
+
+#### Add from sample in the doc https://github.com/rhazdon/hugo-theme-hello-friend-ng/tree/e63dce70a95afeae279c7bc48eb488a4086c496c
+
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+
+[author]
+  name = "Mario Fadegnon"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Metadata mostly used in document's head
+  description = "My new homepage or blog"
+  keywords = "homepage, blog"
+  images = [""]
+  homeSubtitle = "Words from a sysadmin among many others"
+
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+
+[languages]
+  [languages.en]
+    title = "Mario Fadegnon"
+    subtitle = "Words from a sysadmin among many others"
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>'    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "echo mxdjo.github.io"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+################## Link to social accounts (cf https://github.com/major/major.io/blob/ef14714ec187e7404a52509b9cc7f39fe9d6b67f/config.toml ) ##############""
+
+[[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/mxdjo"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:me@mxdjo.xyz"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/mxdjo"
+
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/majorhayden/"
+
+  # And you can even create generic menu
+
+ [[menu.main]]
+    identifier = "devops"
+    name       = "devops"
+    url        = "/devops"
+
+[[menu.main]]
+    identifier = "sysadmin"
+    name       = "sysadmin"
+    url        = "/sysadmin"
